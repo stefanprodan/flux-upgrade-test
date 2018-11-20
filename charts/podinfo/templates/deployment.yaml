@@ -27,10 +27,7 @@ spec:
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           command:
             - ./podinfo
-            - -port={{ .Values.service.containerPort }}
-            {{- if .Values.logLevel }}
-            - -debug=true
-            {{- end }}
+            - --port={{ .Values.service.containerPort }}
           env:
           - name: backend_url
             value: {{ .Values.backend }}
