@@ -6,7 +6,6 @@ metadata:
   namespace: demo
   annotations:
     flux.weave.works/automated: "false"
-    flux.weave.works/tag.chart-image: semver:~1.2
 spec:
   chartGitPath: podinfo
   releaseName: podinfo-test
