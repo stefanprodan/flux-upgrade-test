@@ -10,4 +10,4 @@ spec:
   chartGitPath: podinfo
   releaseName: podinfo-test
   values:
-    image: stefanprodan/podinfo:0.4.0
+    image: quay.io/stefanprodan/podinfo:1.0.0
