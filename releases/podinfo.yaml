@@ -1,13 +1,16 @@
 ---
-apiVersion: helm.integrations.flux.weave.works/v1alpha2
-kind: FluxHelmRelease
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
 metadata:
   name: podinfo
   namespace: demo
   annotations:
     flux.weave.works/automated: "false"
 spec:
-  chartGitPath: podinfo
   releaseName: podinfo-test
+  chart:
+    git: git@github.com:stefanprodan/flux-upgrade-test
+    path: charts/podinfo
+    ref: master
   values:
-    image: quay.io/stefanprodan/podinfo:1.3.0
+    image: stefanprodan/podinfo:1.3.1
