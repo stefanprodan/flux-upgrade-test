@@ -1,4 +1,5 @@
 bases:
   - ./flagger/
+  - ./dev/
 patchesStrategicMerge:
   - flagger-config.yaml
