@@ -1,0 +1,11 @@
+commonLabels:
+  app: flux
+  release: flux
+resources:
+  - account.yaml
+  - crd.yaml
+  - deployment.yaml
+  - memcached.yaml
+images:
+  - name: docker.io/weaveworks/flux
+    newTag: 1.13.1
