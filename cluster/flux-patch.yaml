@@ -2,5 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flagger
+  namespace: flagger-system
   annotations:
     flux.weave.works/locked: "true"
