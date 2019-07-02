@@ -7,14 +7,12 @@ spec:
   selector:
     matchLabels:
       app: flux
-      release: flux
   template:
     metadata:
       annotations:
         prometheus.io.scrape: "true"
       labels:
         app: flux
-        release: flux
     spec:
       serviceAccountName: flux
       volumes:

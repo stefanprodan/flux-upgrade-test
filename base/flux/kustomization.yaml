@@ -1,8 +1,6 @@
-commonLabels:
-  app: flux
-  release: flux
 resources:
   - account.yaml
+  - config.yaml
   - crd.yaml
   - deployment.yaml
   - memcached.yaml

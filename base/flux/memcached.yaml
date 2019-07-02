@@ -1,22 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flux-memcached
+  name: memcached
 spec:
   replicas: 1
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: flux-memcached
-      release: flux
+      app: memcached
   template:
     metadata:
       annotations:
         prometheus.io.scrape: "false"
       labels:
-        app: flux-memcached
-        release: flux
+        app: memcached
     spec:
       containers:
         - name: memcached
@@ -42,7 +40,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: flux-memcached
+  name: memcached
 spec:
   ports:
     - port: 11211
@@ -50,5 +48,5 @@ spec:
       protocol: TCP
       name: memcached
   selector:
-    app: flux-memcached
-    release: flux
+    app: memcached
+
