@@ -1,10 +1,10 @@
 resources:
   - account.yaml
   - config.yaml
-  - crd.yaml
   - deployment.yaml
   - memcached.yaml
-  - rbac.yaml
 images:
-  - name: docker.io/weaveworks/flux
+  - name: weaveworks/flux
     newTag: 1.13.1
+  - name: memcached
+    newTag: 1.5.15

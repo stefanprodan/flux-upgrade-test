@@ -28,7 +28,7 @@ spec:
             medium: Memory
       containers:
         - name: flux
-          image: "docker.io/weaveworks/flux:1.13.1"
+          image: "weaveworks/flux:1.13.1"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
