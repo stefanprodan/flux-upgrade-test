@@ -13,6 +13,6 @@ spec:
             - --git-poll-interval=1m
             - --sync-interval=1m
             - --ssh-keygen-dir=/var/fluxd/keygen
-            - --git-url=git@github.com:stefanprodan/flux-upgrade-test
             - --git-branch=master
             - --git-path=cluster
+            - --git-url=git@github.com:org/dev-cluster
