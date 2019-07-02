@@ -3,5 +3,5 @@ resources:
   - namespace.yaml
   - rbac.yaml
 bases:
-  - ../base/flux/
+  - ../../base/flux/
 
