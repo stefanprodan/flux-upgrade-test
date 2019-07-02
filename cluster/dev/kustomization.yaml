@@ -1,8 +1,7 @@
-namespace: flux-system
+namespace: dev
 resources:
   - namespace.yaml
   - rbac.yaml
 bases:
   - ../base/flux/
-patchesStrategicMerge:
-  - flux-patch.yaml
+

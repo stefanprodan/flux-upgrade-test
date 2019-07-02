@@ -4,6 +4,7 @@ resources:
   - crd.yaml
   - deployment.yaml
   - memcached.yaml
+  - rbac.yaml
 images:
   - name: docker.io/weaveworks/flux
     newTag: 1.13.1
