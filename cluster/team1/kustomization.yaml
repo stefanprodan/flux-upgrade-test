@@ -1,4 +1,4 @@
-namespace: dev
+namespace: team1
 resources:
   - namespace.yaml
   - rbac.yaml

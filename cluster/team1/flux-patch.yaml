@@ -8,12 +8,11 @@ spec:
       containers:
         - name: flux
           args:
-            - --k8s-allow-namespace=dev
             - --manifest-generation=true
             - --memcached-service=
             - --git-poll-interval=1m
             - --sync-interval=1m
             - --ssh-keygen-dir=/var/fluxd/keygen
             - --git-url=git@github.com:stefanprodan/flux-upgrade-test
-            - --git-branch=stg
-            - --git-path=
+            - --git-branch=team1
+            - --k8s-allow-namespace=team1
