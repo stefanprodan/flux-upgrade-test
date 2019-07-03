@@ -28,7 +28,7 @@ spec:
   template:
     spec:
       $setElementOrder/containers:
-        - name: podinfod
+      - name: podinfod
       containers:
-        - image: quay.io/stefanprodan/podinfo:1.4.4
-          name: podinfod
+      - image: quay.io/stefanprodan/podinfo:1.6.1
+        name: podinfod
