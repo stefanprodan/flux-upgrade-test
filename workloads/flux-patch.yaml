@@ -2,14 +2,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podinfo
-  namespace: team1
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.podinfod: semver:~1.4
+  name: podinfo
+  namespace: team1
 spec:
   template:
     spec:
+      $setElementOrder/containers:
+      - name: podinfod
       containers:
-        - name: podinfod
-          image: quay.io/stefanprodan/podinfo:1.4.0
+      - image: quay.io/stefanprodan/podinfo:1.4.4
+        name: podinfod
