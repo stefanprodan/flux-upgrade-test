@@ -1,3 +1,4 @@
 namespace: team1
 bases:
   - ../base/podinfo/
+  - ../base/podinfov2/
