@@ -1,0 +1,14 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.podinfod: semver:~1.4
+spec:
+  template:
+    spec:
+      containers:
+        - name: podinfod
+          image: quay.io/stefanprodan/podinfo:1.4.0
