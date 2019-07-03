@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podinfo
+  namespace: team1
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.podinfod: semver:~1.4
