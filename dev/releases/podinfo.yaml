@@ -15,7 +15,7 @@ spec:
     service:
       enabled: true
       type: ClusterIP
-    replicaCount: 1
+    replicaCount: 2
     hpa:
-      enabled: false
+      enabled: true
       cpu: 90
