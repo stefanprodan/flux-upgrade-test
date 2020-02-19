@@ -1,0 +1,20 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: podinfo
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "false"
+spec:
+  releaseName: podinfo
+  chart:
+    git: https://github.com/stefanprodan/podinfo
+    ref: master
+    path: charts/podinfo
+  values:
+    service:
+      enabled: true
+      type: ClusterIP
+    hpa:
+      enabled: false
+      cpu: 90

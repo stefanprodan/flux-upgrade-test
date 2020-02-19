@@ -1,0 +1,25 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: podinfo
+  namespace: dev
+  annotations:
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.chart-image: semver:~3.1
+spec:
+  releaseName: podinfo
+  chart:
+    repository: https://stefanprodan.github.io/podinfo
+    name: podinfo
+    version: 3.1.0
+  values:
+    image:
+      repository: stefanprodan/podinfo
+      tag: 3.1.0
+    service:
+      enabled: true
+      type: ClusterIP
+    hpa:
+      enabled: true
+      maxReplicas: 6
+      cpu: 90
