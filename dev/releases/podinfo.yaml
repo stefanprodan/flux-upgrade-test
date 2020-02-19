@@ -16,5 +16,5 @@ spec:
       enabled: true
       type: ClusterIP
     hpa:
-      enabled: false
+      enabled: true
       cpu: 90
