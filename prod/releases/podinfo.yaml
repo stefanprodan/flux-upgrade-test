@@ -2,7 +2,7 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: podinfo
-  namespace: dev
+  namespace: prod
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.chart-image: semver:~3.1
