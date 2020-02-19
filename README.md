@@ -2,6 +2,10 @@
 
 
 ```bash
+kubectl create ns flux
+```
+
+```bash
 helm upgrade -i flux fluxcd/flux \
 --namespace flux \
 --set git.url=git@github.com:stefanprodan/gitops-test
