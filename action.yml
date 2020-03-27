@@ -1,0 +1,9 @@
+name: 'fluxctl'
+description: 'Flux CD GitHub Action'
+author: 'Stefan Prodan'
+branding:
+  icon: 'command'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: './src/Dockerfile'
